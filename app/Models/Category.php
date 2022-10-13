@@ -9,6 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
     /*
     * Has many products.
     * Product belongs to category. (fk: category_id)
