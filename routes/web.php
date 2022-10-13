@@ -14,21 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $a = 1;
-    $b = $a + 100;
-    return 'Hello World';
+    return view('welcome');
+})->name('main');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::name('admin.')->prefix('admin')->middleware(['auth', 'admin'])->group(function() {
+    Route::get('dashboard', \App\Http\Controllers\Admin\DashboardController::class)->name('dashboard');
+
+    Route::resource('categories', \App\Http\Controllers\Admin\CategoriesController::class)->except(['show']);
+    Route::resource('products', \App\Http\Controllers\Admin\ProductsController::class)->except(['show']);
 });
-
-Route::get('/lida', [\App\Http\Controllers\MyController::class, 'index']);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
