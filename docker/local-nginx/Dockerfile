@@ -9,6 +9,8 @@ COPY . /var/www/html
 WORKDIR /var/www/html
 
 # Установка Xdebug
+
+RUN chown -R www-data:www-data /var/www/html
 RUN chod -R 765 /var/www/html
 RUN chod -R 777 /var/www/html/storage
 
