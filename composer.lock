@@ -4,8 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71f577ba579842dd7fd91177e486dd4d",
+    "content-hash": "de1933b68bad199f0a0984e793b4a3d0",
     "packages": [
+        {
+            "name": "appslabke/lara-izitoast",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AppsLab-KE/lara-izitoast.git",
+                "reference": "9636c4c3b28855c5d9c6169a10499f6b59568e0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AppsLab-KE/lara-izitoast/zipball/9636c4c3b28855c5d9c6169a10499f6b59568e0a",
+                "reference": "9636c4c3b28855c5d9c6169a10499f6b59568e0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaraIzitoast\\LaraIzitoastServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lara-izitoast/src/helpers.php"
+                ],
+                "psr-4": {
+                    "LaraIzitoast\\": "lara-izitoast/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MARVIN COLLINS",
+                    "email": "marvin@appslab.co.ke"
+                }
+            ],
+            "description": "Simplified wrapper for izitoast javascript notification library",
+            "support": {
+                "issues": "https://github.com/AppsLab-KE/lara-izitoast/issues",
+                "source": "https://github.com/AppsLab-KE/lara-izitoast/tree/v1.1.1"
+            },
+            "time": "2019-01-31T12:43:02+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.10.2",
@@ -63,6 +113,77 @@
             "time": "2022-08-10T22:54:19+00:00"
         },
         {
+            "name": "bumbummen99/shoppingcart",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bumbummen99/LaravelShoppingcart.git",
+                "reference": "1c50fb564826b6ee748d2d9afad7447b6884166e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bumbummen99/LaravelShoppingcart/zipball/1c50fb564826b6ee748d2d9afad7447b6884166e",
+                "reference": "1c50fb564826b6ee748d2d9afad7447b6884166e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/events": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0||^8.0||^9.0",
+                "illuminate/session": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0||^8.0||^9.0",
+                "illuminate/support": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0||^8.0||^9.0",
+                "nesbot/carbon": "~1.20||^1.26.3||^2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^3.4|^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "~5.0||~6.0||~7.0||~8.0||~9.0"
+            },
+            "suggest": {
+                "gloudemans/notify": "Simple flash notifications for Laravel"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cart": "Gloudemans\\Shoppingcart\\Facades\\Cart"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gloudemans\\Shoppingcart\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Gloudemans",
+                    "email": "info@robgloudemans.nl",
+                    "page": "http://robgloudemans.nl/"
+                },
+                {
+                    "name": "Patrick Henninger",
+                    "email": "privat@skyraptor.eu",
+                    "page": "https://skyraptor.eu/"
+                }
+            ],
+            "description": "Laravel Shoppingcart",
+            "keywords": [
+                "laravel",
+                "shoppingcart"
+            ],
+            "support": {
+                "issues": "https://github.com/bumbummen99/LaravelShoppingcart/issues",
+                "source": "https://github.com/bumbummen99/LaravelShoppingcart/tree/4.2.0"
+            },
+            "time": "2022-05-15T15:32:38+00:00"
+        },
+        {
             "name": "dflydev/dot-access-data",
             "version": "v3.0.1",
             "source": {
@@ -105,26 +226,26 @@
                 {
                     "name": "Dragonfly Development Inc.",
                     "email": "info@dflydev.com",
-                    "homepage": "http://dflydev.com"
+                    "page": "http://dflydev.com"
                 },
                 {
                     "name": "Beau Simensen",
                     "email": "beau@dflydev.com",
-                    "homepage": "http://beausimensen.com"
+                    "page": "http://beausimensen.com"
                 },
                 {
                     "name": "Carlos Frutos",
                     "email": "carlos@kiwing.it",
-                    "homepage": "https://github.com/cfrutos"
+                    "page": "https://github.com/cfrutos"
                 },
                 {
                     "name": "Colin O'Dell",
                     "email": "colinodell@gmail.com",
-                    "homepage": "https://www.colinodell.com"
+                    "page": "https://www.colinodell.com"
                 }
             ],
             "description": "Given a deep data structure, access data by dot notation.",
-            "homepage": "https://github.com/dflydev/dflydev-dot-access-data",
+            "page": "https://github.com/dflydev/dflydev-dot-access-data",
             "keywords": [
                 "access",
                 "data",
@@ -195,7 +316,7 @@
                 }
             ],
             "description": "PHP Doctrine Inflector is a small library that can perform string manipulations with regard to upper/lowercase and singular/plural forms of words.",
-            "homepage": "https://www.doctrine-project.org/projects/inflector.html",
+            "page": "https://www.doctrine-project.org/projects/inflector.html",
             "keywords": [
                 "inflection",
                 "inflector",
@@ -276,7 +397,7 @@
                 }
             ],
             "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
-            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
+            "page": "https://www.doctrine-project.org/projects/lexer.html",
             "keywords": [
                 "annotations",
                 "docblock",
@@ -345,7 +466,7 @@
                 {
                     "name": "Chris Tankersley",
                     "email": "chris@ctankersley.com",
-                    "homepage": "https://github.com/dragonmantank"
+                    "page": "https://github.com/dragonmantank"
                 }
             ],
             "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
@@ -413,7 +534,7 @@
                 }
             ],
             "description": "A library for validating emails against several RFCs",
-            "homepage": "https://github.com/egulias/EmailValidator",
+            "page": "https://github.com/egulias/EmailValidator",
             "keywords": [
                 "email",
                 "emailvalidation",
@@ -474,7 +595,7 @@
             "authors": [
                 {
                     "name": "Fruitcake",
-                    "homepage": "https://fruitcake.nl"
+                    "page": "https://fruitcake.nl"
                 },
                 {
                     "name": "Barryvdh",
@@ -482,7 +603,7 @@
                 }
             ],
             "description": "Cross-origin resource sharing library for the Symfony HttpFoundation",
-            "homepage": "https://github.com/fruitcake/php-cors",
+            "page": "https://github.com/fruitcake/php-cors",
             "keywords": [
                 "cors",
                 "laravel",
@@ -539,7 +660,7 @@
                 {
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
-                    "homepage": "https://github.com/GrahamCampbell"
+                    "page": "https://github.com/GrahamCampbell"
                 }
             ],
             "description": "An Implementation Of The Result Type",
@@ -629,27 +750,27 @@
                 {
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
-                    "homepage": "https://github.com/GrahamCampbell"
+                    "page": "https://github.com/GrahamCampbell"
                 },
                 {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
+                    "page": "https://github.com/mtdowling"
                 },
                 {
                     "name": "Jeremy Lindblom",
                     "email": "jeremeamia@gmail.com",
-                    "homepage": "https://github.com/jeremeamia"
+                    "page": "https://github.com/jeremeamia"
                 },
                 {
                     "name": "George Mponos",
                     "email": "gmponos@gmail.com",
-                    "homepage": "https://github.com/gmponos"
+                    "page": "https://github.com/gmponos"
                 },
                 {
                     "name": "Tobias Nyholm",
                     "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/Nyholm"
+                    "page": "https://github.com/Nyholm"
                 },
                 {
                     "name": "Márk Sági-Kazár",
