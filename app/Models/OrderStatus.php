@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use App\Helpers\Enums\OrderStatusesEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Helpers\Enums\OrderEnum;
 
 class OrderStatus extends Model
 {
@@ -17,34 +17,13 @@ class OrderStatus extends Model
         return $this->hasMany(Order::class);
     }
 
-
-    public function scopeCompleted($query)
+    public function scopeDefaultStatus($query)
     {
-        return $this->getOrderStatus($query, 'completed');
+        return $query->where('name', OrderStatusesEnum::InProcess->value);
     }
 
-    public function scopePaid($query)
+    public function scopePaidStatus($query)
     {
-        return $this->getOrderStatus($query, 'Paid');
-    }
-
-
-    public function scopeCanceled($query)
-    {
-        return $this->getOrderStatus($query, 'Canceled');
-    }
-
-    public function scopeInProcess($query)
-    {
-        return $this->getOrderStatus($query);
-    }
-
-    protected function getOrderStatus($query, $status = 'InProcess')
-    {
-        return $query->where(
-            'name',
-            '=',
-            OrderEnum::findByKey(ucfirst($status))->value
-        );
+        return $query->where('name', OrderStatusesEnum::Paid->value);
     }
 }

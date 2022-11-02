@@ -1,9 +1,27 @@
 <?php return array (
+  'appslabke/lara-izitoast' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'LaraIzitoast\\LaraIzitoastServiceProvider',
+    ),
+  ),
   'barryvdh/laravel-ide-helper' => 
   array (
     'providers' => 
     array (
       0 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
+    ),
+  ),
+  'bumbummen99/shoppingcart' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Cart' => 'Gloudemans\\Shoppingcart\\Facades\\Cart',
     ),
   ),
   'laravel/sail' => 
@@ -64,6 +82,17 @@
     'aliases' => 
     array (
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
+    ),
+  ),
+  'srmklive/paypal' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Srmklive\\PayPal\\Providers\\PayPalServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'PayPal' => 'Srmklive\\PayPal\\Facades\\PayPal',
     ),
   ),
 );

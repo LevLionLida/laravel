@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <h3 class="text-center">{{ __('Checkout') }}</h3>
@@ -10,7 +11,7 @@
                 @endif
             </div>
             <div class="col-md-8">
-                <form id="order-form" action="{{ route('orders') }}" method="POST">
+                <form id="order-form" action="/" method="POST">
                     @csrf
                     <div class="form-group row">
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -56,10 +57,7 @@
                             <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}">
                         </div>
                     </div>
-                    <button type="submit">Make order</button>
-
                 </form>
-
             </div>
             <div class="col-md-4">
                 <table class="table table-light">
@@ -73,19 +71,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                        @foreach(Cart::instance('cart')->content() as $cartItem)
-                            <tr>
-                                <td>
-                                    <img src="{{ $cartItem->model->thumbnailUrl }}" alt="{{ $cartItem->name }}" style="width: 50px;">
-                                </td>
-                                <td>
-                                    <a href="{{ route('products.show', $cartItem->id) }}"><strong>{{ $cartItem->name }}</strong></a>
-                                </td>
-                                <td>{{ $cartItem->qty }}</td>
-                                <td>{{ $cartItem->price }}$</td>
-                                <td>{{ $cartItem->subtotal }}$</td>
-                            </tr>
-                        @endforeach
+                    @foreach(Cart::instance('cart')->content() as $cartItem)
+                        <tr>
+                            <td>
+                                <img src="{{ $cartItem->model->thumbnailUrl }}" alt="{{ $cartItem->name }}" style="width: 50px;">
+                            </td>
+                            <td>
+                                <a href="{{ route('products.show', $cartItem->id) }}"><strong>{{ $cartItem->name }}</strong></a>
+                            </td>
+                            <td>{{ $cartItem->qty }}</td>
+                            <td>{{ $cartItem->price }}$</td>
+                            <td>{{ $cartItem->subtotal }}$</td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
                 <hr>
