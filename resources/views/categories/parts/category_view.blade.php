@@ -1,6 +1,9 @@
 @if ($category)
-    <a href="#"
-       class="text-muted btn btn-outline-dark">
-        {{ __($category?->name ?? '') }}
-    </a>
+{{--    <a href="#"--}}
+
+{{--       class="p-2 link-secondary">--}}
+{{--        {{ __($category?->name ?? '') }}--}}
+{{--    </a>--}}
+
+    <a href="{{ route('categories.show', $category->id) }}" class="p-2 link-secondary"> {{ __($category?->name ?? '') }}</a>
 @endif
