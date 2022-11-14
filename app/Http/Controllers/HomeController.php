@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
 
         $categories=Category::all();
-        $products=Product::all()->take(4);
+        $products = Product::all()->where('in_stock', '>', 0)->take(6);
         notify()->success("Welcome ", "Title","bottomRight" );
         return view('home', compact('products', 'categories'));
     }

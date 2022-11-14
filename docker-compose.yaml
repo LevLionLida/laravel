@@ -16,7 +16,8 @@ services:
   app:
     build:
       context: .
-      dockerfile: docker/local-nginx/Dockerfile
+      dockerfile: docker/local-nginx/Dodocker pull bitnami/redis:latest
+      ckerfile
     container_name: laravel_app
     volumes:
       - .:/var/www/html

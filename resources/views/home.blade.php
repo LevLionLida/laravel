@@ -10,7 +10,7 @@
                     @each('categories.parts.category_view', $categories, 'category')
             </nav>
         </div>
-
+<p>lida</p>
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
