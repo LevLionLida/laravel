@@ -1,4 +1,4 @@
-docker/*
+docker/local-nginx/tmp/db/*
 
 .DS_Store
 /node_modules
