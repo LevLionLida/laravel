@@ -42,7 +42,6 @@ Route::delete('cart', [\App\Http\Controllers\CartController::class, 'remove'])->
 Route::post('cart/{product}/count', [\App\Http\Controllers\CartController::class, 'countUpdate'])->name('cart.count.update');
 
 
-
 Route::middleware('auth')->group(function() {
     Route::get('checkout', \App\Http\Controllers\CheckoutController::class)->name('checkout');
   Route::post('order', \App\Http\Controllers\OrdersController::class)->name('orders');
@@ -65,6 +64,11 @@ Route::name('account.')->prefix('account')->group(function() {
     Route::put('{user}', [\App\Http\Controllers\Account\UsersController::class, 'update'])
         ->middleware('can:update,user')
         ->name('update');
+    Route::get('orders/{user}/list', [\App\Http\Controllers\Account\UsersController::class, 'list'])
+        ->middleware('can:view,user')
+        ->name('orders.list');
+    Route::get('orders/{order}/show', [\App\Http\Controllers\Account\UsersController::class, 'show'])
+        ->name('orders.show');
 });
 
 Route::prefix('paypal')->group(function() {

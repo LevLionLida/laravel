@@ -7,6 +7,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('account.edit', Auth()->user()) }}">{{ __('Edit Profile') }}</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('account.orders.list', Auth()->user()) }}">
+                        {{ __('My orders') }}
+                    </a>
+                </li>
 {{--                <li class="nav-item">--}}
 {{--                    <a class="nav-link" href="{{ route('account.wishlist') }}">{{ __('WishList') }}</a>--}}
 {{--                </li>--}}
@@ -14,6 +19,7 @@
 {{--                    <a class="nav-link" href="{{ route('account.orders.list') }}">{{ __('My orders') }}</a>--}}
 {{--                </li>--}}
             </ul>
+
         </div>
     </div>
 </nav>

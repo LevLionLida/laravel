@@ -67,6 +67,7 @@
                                     <a class="dropdown-item" href="{{ route('account.index') }}">
                                         {{ __('Account') }}
                                     </a>
+
                                     @if (auth()->user()->is_admin)
                                         <a href="{{ route('admin.dashboard') }}" class="dropdown-item">{{ __('Admin Dashboard') }}</a>
                                     @endif
